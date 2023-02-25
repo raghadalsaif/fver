@@ -38,10 +38,10 @@ struct GameView: View {
                                 Circle()
                                     .foregroundColor(.gray.opacity(0.7))
                                     .frame(width: geometry.size.width/3 - 15)
-                                PlayerIndicatorView(systemimagename: "applelogo")
+                                PlayerIndicatorView(systemimagename: viewModel.game.moves[i]?.indicater ?? "applelogo")
                                     
                             }.onTapGesture {
-                                print("tap on sport", i)
+                                viewModel.processPlayerMove(for: i)
                             }
                             
                             
