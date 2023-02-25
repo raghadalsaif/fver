@@ -5,9 +5,11 @@
 //  Created by raghad khalid alsaif on 05/08/1444 AH.
 //
 
+
 import Foundation
 import Firebase
 import FirebaseFirestoreSwift
+
 import Combine
 
 final class FirebaseService: ObservableObject{
@@ -22,6 +24,12 @@ final class FirebaseService: ObservableObject{
    
     func createOnlineGame(){
         //save the game online
+        do{
+            //try to save any thing in the firebase
+            try FirebaseReference(.Game).document(self.game.id).setData(from: self.game)
+        }catch{
+            print("Error createing online game", error.localizedDescription)
+        }
     }
     
 
@@ -56,6 +64,13 @@ final class FirebaseService: ObservableObject{
     // this function will create a new game if there is no games
     func createNewGame(with userId: String){
         // create game object
+       print("create game for userid", userId)
+        
+        self.game = Game(id: UUID().uuidString, player1Id: userId, player2Id: "", blockMoveForPlayerId: userId, winningPlayerId: "", rematchPlayerId: [], moves: Array(repeating: nil, count: 9))
+        
+        self.createOnlineGame()
+        self.listenForGameChanges()
+
     }
     
     func updateGame(_ game: Game){}

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 final class GmaeViewModel: ObservableObject {
     @AppStorage("user") private var userData: Data?
@@ -14,7 +15,9 @@ final class GmaeViewModel: ObservableObject {
                               GridItem(.flexible()),
                               GridItem(.flexible()),]
     
-    @Published var game = Game(id: UUID().uuidString, player1Id: "playrid1", player2Id: "playerid2", blockMoveForPlayerId: "playerid2", winningPlayerId: "", rematchPlayerId: [], moves: Array(repeating: nil, count: 9))
+    @Published var game : Game?
+    
+    private var cancellables: Set<AnyCancellable> = []
     
     @Published var currentUser : User!
     
@@ -31,30 +34,39 @@ final class GmaeViewModel: ObservableObject {
         print("we have user with id:", currentUser.id)
     }
     
+    
+    func getTheGame(){
+        //this will start the game
+        FirebaseService.shared.startGame(with: currentUser.id)
+        //create i var to contane all the data that will be retrive from the firebase
+        FirebaseService.shared.$game
+            .assign(to: \.game, on: self)
+            .store(in: &cancellables)
+        
+    }
+    
     func processPlayerMove(for position : Int){
-        
-        
-        
-        //check if the position is occupied
-        if isSquareOcupied(in: game.moves, forIndex: position) { return }
-        
-        game.moves[position] = Move(isPlayer1: true, boardIndex: position)
-        game.blockMoveForPlayerId = "player2"
-        
-        //block the move
-        
-        
-        //check for win
-        if checkForWinCondition(for: true, in: game.moves){
-            print("you have won!")
-            return
-        }
-        
-        //check for draw
-        if checkForDraw(in: game.moves){
-            print("Draw!")
-            return
-        }
+//        
+//        //check if the position is occupied
+//        if isSquareOcupied(in: game.moves, forIndex: position) { return }
+//        
+//        game.moves[position] = Move(isPlayer1: true, boardIndex: position)
+//        game.blockMoveForPlayerId = "player2"
+//        
+//        //block the move
+//        
+//        
+//        //check for win
+//        if checkForWinCondition(for: true, in: game.moves){
+//            print("you have won!")
+//            return
+//        }
+//        
+//        //check for draw
+//        if checkForDraw(in: game.moves){
+//            print("Draw!")
+//            return
+//        }
         
     }
     

@@ -12,6 +12,8 @@ struct GameView: View {
     @ObservedObject var viewModel:  GmaeViewModel
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
+    
+    
     @Environment(\.dismiss) private var dismiss
     var body: some View {
         
@@ -25,7 +27,7 @@ struct GameView: View {
                     Text("Quit")
                 }
                 //
-               // LodingView()
+               LodingView()
                 Spacer()
                 
                 VStack{
@@ -38,7 +40,7 @@ struct GameView: View {
                                 Circle()
                                     .foregroundColor(.gray.opacity(0.7))
                                     .frame(width: geometry.size.width/3 - 15)
-                                PlayerIndicatorView(systemimagename: viewModel.game.moves[i]?.indicater ?? "applelogo")
+                                PlayerIndicatorView(systemimagename: viewModel.game?.moves[i]?.indicater ?? "applelogo")
                                     
                             }.onTapGesture {
                                 viewModel.processPlayerMove(for: i)
@@ -50,6 +52,9 @@ struct GameView: View {
                 }
                 
             }
+        }
+        .onAppear {
+            viewModel.getTheGame()
         }
        
         
