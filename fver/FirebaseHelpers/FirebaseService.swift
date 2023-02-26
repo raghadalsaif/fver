@@ -10,6 +10,8 @@ import Firebase
 import FirebaseFirestoreSwift
 import Combine
 
+
+
 final class FirebaseService: ObservableObject{
     
     static let shared = FirebaseService()
@@ -47,6 +49,8 @@ final class FirebaseService: ObservableObject{
                 self.game = try? gameData.data(as: Game.self)
                 self.game.player2Id = userId
                 self.game.blockMoveForPlayerId = userId
+                
+                
                 self.updateGame(self.game)
                 //lesining for all the changes
                 self.listenForGameChanges()
@@ -57,7 +61,19 @@ final class FirebaseService: ObservableObject{
     }
     
     // listen for the changes in the game session
-    func listenForGameChanges(){}
+    func listenForGameChanges(){
+        FirebaseReference(.Game).document(self.game.id).addSnapshotListener { documentSnapshot , error in
+            print("changes received from firebase")
+            
+            if error != nil{
+                print("Error listening to changes", error?.localizedDescription)
+                return
+            }
+            if let snapshot = documentSnapshot {
+                self.game = try? snapshot.data(as: Game.self)
+            }
+        }
+    }
     
     // this function will create a new game if there is no games
     func createNewGame(with userId: String){
@@ -71,9 +87,23 @@ final class FirebaseService: ObservableObject{
 
     }
     
-    func updateGame(_ game: Game){}
+    func updateGame(_ game: Game){
+        print("ubdate the game ")
+        
+        do{
+            //try to save any thing in the firebase
+            try FirebaseReference(.Game).document(game.id).setData(from: game)
+        }catch{
+            print("Error updating online game", error.localizedDescription)
+        }
+
+        
+    }
     
     // to quit the game
-    func quiteTheGame(){}
+    func quiteTheGame(){
+        guard game != nil else {return}
+        FirebaseReference(.Game).document(self.game.id).delete()
+    }
     
 }

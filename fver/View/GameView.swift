@@ -22,7 +22,9 @@ struct GameView: View {
                 Text("waiting for the player")
                 Button{
                    // mode.wrappedValue.dismiss() or
+                    
                     dismiss()
+                    viewModel.quitGame()
                 }label: {
                     Text("Quit")
                 }

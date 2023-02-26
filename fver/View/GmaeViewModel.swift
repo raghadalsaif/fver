@@ -30,7 +30,6 @@ final class GmaeViewModel: ObservableObject {
         if currentUser == nil{
             saveUser()
         }
-        
         print("we have user with id:", currentUser.id)
     }
     
@@ -46,32 +45,41 @@ final class GmaeViewModel: ObservableObject {
     }
     
     func processPlayerMove(for position : Int){
-//        
-//        //check if the position is occupied
-//        if isSquareOcupied(in: game.moves, forIndex: position) { return }
-//        
-//        game.moves[position] = Move(isPlayer1: true, boardIndex: position)
-//        game.blockMoveForPlayerId = "player2"
-//        
-//        //block the move
-//        
-//        
-//        //check for win
-//        if checkForWinCondition(for: true, in: game.moves){
-//            print("you have won!")
-//            return
-//        }
-//        
-//        //check for draw
-//        if checkForDraw(in: game.moves){
-//            print("Draw!")
-//            return
-//        }
+        
+        guard game != nil else{return}
+        
+        //check if the position is occupied
+        if isSquareOcupied(in: game!.moves, forIndex: position) { return }
+        
+        game!.moves[position] = Move(isPlayer1: true, boardIndex: position)
+       
+        
+        //block the move
+        game!.blockMoveForPlayerId = currentUser.id
+        
+        FirebaseService.shared.updateGame(game!)
+        
+        
+        //check for win
+        if checkForWinCondition(for: true, in: game!.moves){
+            game!.winningPlayerId = currentUser.id
+            FirebaseService.shared.updateGame(game!)
+            print("you have won!")
+            return
+        }
+        
+        //check for draw
+        if checkForDraw(in: game!.moves){
+            game!.winningPlayerId = "0"
+            FirebaseService.shared.updateGame(game!)
+            print("Draw!")
+            return
+        }
         
     }
     
     func isSquareOcupied(in moves: [Move?], forIndex index: Int) ->Bool{
-        return moves.contains (where: { $0?.boardIndex == index })
+        return moves.contains(where: { $0?.boardIndex == index })
     }
     
     func checkForWinCondition(for player1: Bool, in moves: [Move?]) -> Bool{
@@ -89,6 +97,10 @@ final class GmaeViewModel: ObservableObject {
         return moves.compactMap{$0}.count == 9
     }
     
+    
+    func quitGame(){
+        FirebaseService.shared.quiteTheGame()
+    }
     
     //MARK: user object
     
