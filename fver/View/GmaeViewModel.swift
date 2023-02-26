@@ -55,7 +55,7 @@ final class GmaeViewModel: ObservableObject {
         print("we have user with id:", currentUser.id)
     }
     
-    
+    //done 👍🏻
     func getTheGame(){
         //this will start the game
         FirebaseService.shared.startGame(with: currentUser.id)
