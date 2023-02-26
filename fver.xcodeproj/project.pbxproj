@@ -29,6 +29,7 @@
 		561A219529AA3554005FC643 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561A219429AA3554005FC643 /* FirebaseService.swift */; };
 		561A219A29AB43B3005FC643 /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 561A219929AB43B3005FC643 /* FirebaseAppDistribution-Beta */; };
 		561A21D629AB641A005FC643 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561A21D529AB641A005FC643 /* AlertItem.swift */; };
+		561A21D829AB7727005FC643 /* GameNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561A21D729AB7727005FC643 /* GameNotifications.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		561A219129AA3418005FC643 /* FirebaseRefrnce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRefrnce.swift; sourceTree = "<group>"; };
 		561A219429AA3554005FC643 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		561A21D529AB641A005FC643 /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
+		561A21D729AB7727005FC643 /* GameNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameNotifications.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				561A217E29A9F757005FC643 /* Model.swift */,
 				561A218029AA0EC0005FC643 /* User.swift */,
 				561A21D529AB641A005FC643 /* AlertItem.swift */,
+				561A21D729AB7727005FC643 /* GameNotifications.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				561A219529AA3554005FC643 /* FirebaseService.swift in Sources */,
 				561A217B29A96ACC005FC643 /* LodingView.swift in Sources */,
 				561A217229A957B8005FC643 /* GameView.swift in Sources */,
+				561A21D829AB7727005FC643 /* GameNotifications.swift in Sources */,
 				561A216429A93F7C005FC643 /* fverApp.swift in Sources */,
 				561A218129AA0EC0005FC643 /* User.swift in Sources */,
 				561A219229AA3418005FC643 /* FirebaseRefrnce.swift in Sources */,

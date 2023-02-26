@@ -19,8 +19,14 @@ final class GmaeViewModel: ObservableObject {
         didSet{
             checkIfGameIsOver()
             //check the game state
+            //update game Notification
+            if game == nil{updateGameNotification(.finished)} else{
+                game?.player2Id == "" ? updateGameNotification(.waitingForPlayer): updateGameNotification(.started)
+            }
         }
     }
+    
+    @Published var gameNotification = GameNotifications.waitingForplayer
     @Published var currentUser : User!
     @Published var alertItem : AlertItem?
     
@@ -162,6 +168,23 @@ final class GmaeViewModel: ObservableObject {
         }
         game!.rematchPlayerId.append(currentUser.id)
         FirebaseService.shared.updateGame(game!)
+        
+    }
+    
+    
+    
+    
+    func updateGameNotification(_ state: GameState){
+      
+        switch state {
+        case .started:
+            gameNotification = GameNotifications.gameHasStarted
+        case .waitingForPlayer:
+            gameNotification = GameNotifications.waitingForplayer
+        case .finished:
+            gameNotification = GameNotifications.gameFinished
+        }
+        
         
     }
     //MARK: user object
