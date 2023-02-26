@@ -29,7 +29,10 @@ struct GameView: View {
                     Text("Quit")
                 }
                 //
-               LodingView()
+                if viewModel.game?.player2Id == ""{
+                    LodingView()
+                }
+              
                 Spacer()
                 
                 VStack{
@@ -51,7 +54,23 @@ struct GameView: View {
                             
                         }
                     }
-                }
+                }.disabled(viewModel.checkForGameBoardStatus())
+                    .padding()
+                    .alert(item: $viewModel.alertItem) { aleryItem in
+                        aleryItem.isForQuit ?
+                        
+                        Alert(title: aleryItem.title, message: aleryItem.message, dismissButton: .destructive(aleryItem.buttonTitle, action:{
+                            self.mode.wrappedValue.dismiss()
+                            viewModel.quitGame()
+                        }))
+                        
+                        : Alert(title: aleryItem.title,message: aleryItem.message, primaryButton: .default(aleryItem.buttonTitle, action: {
+                            //reset the game
+                        }), secondaryButton: .destructive(Text("Quit"), action: {
+                            self.mode.wrappedValue.dismiss()
+                            viewModel.quitGame()
+                        }))
+                    }
                 
             }
         }
