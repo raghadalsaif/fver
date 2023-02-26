@@ -140,6 +140,30 @@ final class GmaeViewModel: ObservableObject {
             }
         }
     }
+    
+    
+    func restGame(){
+        
+        guard game != nil else{
+            alertItem = AlertContext.quit
+            return
+        }
+        
+        if game!.rematchPlayerId.count == 1{
+            //start new game
+            game!.moves = Array(repeating: nil, count: 9)
+            game!.winningPlayerId = ""
+            game!.blockMoveForPlayerId = game!.player2Id
+            
+            
+        } else if game!.rematchPlayerId.count == 2{
+            // we start the new game
+            game!.rematchPlayerId = []
+        }
+        game!.rematchPlayerId.append(currentUser.id)
+        FirebaseService.shared.updateGame(game!)
+        
+    }
     //MARK: user object
     
     func saveUser(){

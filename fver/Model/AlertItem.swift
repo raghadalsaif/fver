@@ -27,7 +27,7 @@ struct AlertContext{
     
     static let draw = AlertItem(title: Text("Drow!"), message: Text("that was cool!"), buttonTitle: Text("Rematch"))
     
-    static let youWin = AlertItem(isForQuit: true, title: Text("gameOver!"), message: Text("Othe playr left."), buttonTitle: Text("Quit"))
+    static let quit = AlertItem(isForQuit: true, title: Text("gameOver!"), message: Text("Othe playr left."), buttonTitle: Text("Quit"))
     
     
     

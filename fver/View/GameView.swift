@@ -55,8 +55,9 @@ struct GameView: View {
                         }
                     }
                 }.disabled(viewModel.checkForGameBoardStatus())
-                    .padding()
-                    .alert(item: $viewModel.alertItem) { aleryItem in
+                 .padding()
+                 .alert(item: $viewModel.alertItem) { aleryItem in
+                     
                         aleryItem.isForQuit ?
                         
                         Alert(title: aleryItem.title, message: aleryItem.message, dismissButton: .destructive(aleryItem.buttonTitle, action:{
@@ -66,6 +67,7 @@ struct GameView: View {
                         
                         : Alert(title: aleryItem.title,message: aleryItem.message, primaryButton: .default(aleryItem.buttonTitle, action: {
                             //reset the game
+                            viewModel.restGame()
                         }), secondaryButton: .destructive(Text("Quit"), action: {
                             self.mode.wrappedValue.dismiss()
                             viewModel.quitGame()
