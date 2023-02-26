@@ -9,6 +9,7 @@ import SwiftUI
 import Combine
 
 final class GmaeViewModel: ObservableObject {
+    
     @AppStorage("user") private var userData: Data?
     
     var colums: [GridItem] = [GridItem(.flexible()),
@@ -27,17 +28,25 @@ final class GmaeViewModel: ObservableObject {
     }
     
     @Published var gameNotification = GameNotifications.waitingForplayer
-    @Published var currentUser : User!
+    @Published var currentUser : User! //it is not optinal
     @Published var alertItem : AlertItem?
     
     private var cancellables: Set<AnyCancellable> = []
     
    
     
-    private let winPatterns: Set<Set<Int>> = [   [0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6] ]
+    private let winPatterns: Set<Set<Int>> = [   [0,1,2],
+                                                 [3,4,5],
+                                                 [6,7,8],
+                                                 [0,3,6],
+                                                 [1,4,7],
+                                                 [2,5,8],
+                                                 [0,4,8],
+                                                 [2,4,6] ]
     
     
     init(){
+        
         retriveUser()
         
         if currentUser == nil{
@@ -187,10 +196,10 @@ final class GmaeViewModel: ObservableObject {
         
         
     }
-    //MARK: user object
+    //MARK: - user object
     
     func saveUser(){
-        
+        //done 👍🏻
         currentUser = User()
         do{
             print("encoding user object")
@@ -204,6 +213,7 @@ final class GmaeViewModel: ObservableObject {
     
     
     func retriveUser(){
+        //done 👍🏻
         
         guard let userData = userData else {return}
         

@@ -30,6 +30,7 @@
 		561A219A29AB43B3005FC643 /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 561A219929AB43B3005FC643 /* FirebaseAppDistribution-Beta */; };
 		561A21D629AB641A005FC643 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561A21D529AB641A005FC643 /* AlertItem.swift */; };
 		561A21D829AB7727005FC643 /* GameNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561A21D729AB7727005FC643 /* GameNotifications.swift */; };
+		56F52FCB29AB7E1600CF8060 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 56F52FCA29AB7E1600CF8060 /* FirebaseFirestoreSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 				561A218C29AA30A7005FC643 /* FirebaseFirestore in Frameworks */,
 				561A218429AA30A7005FC643 /* FirebaseAnalytics in Frameworks */,
 				561A218E29AA30A7005FC643 /* FirebaseStorage in Frameworks */,
+				56F52FCB29AB7E1600CF8060 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +183,7 @@
 				561A218B29AA30A7005FC643 /* FirebaseFirestore */,
 				561A218D29AA30A7005FC643 /* FirebaseStorage */,
 				561A219929AB43B3005FC643 /* FirebaseAppDistribution-Beta */,
+				56F52FCA29AB7E1600CF8060 /* FirebaseFirestoreSwift */,
 			);
 			productName = fver;
 			productReference = 561A216029A93F7C005FC643 /* fver.app */;
@@ -498,6 +501,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 561A218229AA30A7005FC643 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseAppDistribution-Beta";
+		};
+		56F52FCA29AB7E1600CF8060 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 561A218229AA30A7005FC643 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

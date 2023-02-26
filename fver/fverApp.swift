@@ -12,6 +12,7 @@ import Firebase
 struct fverApp: App {
     
     init(){
+        
         FirebaseApp.configure()
     }
     
