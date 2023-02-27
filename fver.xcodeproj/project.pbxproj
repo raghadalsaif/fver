@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		510756AD29AD195E00B137A6 /* AntTreeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510756AC29AD195E00B137A6 /* AntTreeGame.swift */; };
+		510756AF29AD197200B137A6 /* games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510756AE29AD197200B137A6 /* games.swift */; };
+		510756B129AD197900B137A6 /* caustomcards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510756B029AD197900B137A6 /* caustomcards.swift */; };
+		510756B329AD197E00B137A6 /* ConnnectFourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510756B229AD197E00B137A6 /* ConnnectFourView.swift */; };
+		510756B529AD198200B137A6 /* ConnectFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510756B429AD198200B137A6 /* ConnectFour.swift */; };
+		510756B729AD198700B137A6 /* RPSMultipeerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510756B629AD198700B137A6 /* RPSMultipeerSession.swift */; };
+		510756B929AD198C00B137A6 /* PairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510756B829AD198C00B137A6 /* PairView.swift */; };
+		510756BB29AD199200B137A6 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510756BA29AD199100B137A6 /* ResultView.swift */; };
+		510756BD29AD199700B137A6 /* Homee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510756BC29AD199700B137A6 /* Homee.swift */; };
+		510756BF29AD199C00B137A6 /* Stickersview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510756BE29AD199C00B137A6 /* Stickersview.swift */; };
+		510756C129AD19B100B137A6 /* CV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510756C029AD19B100B137A6 /* CV.swift */; };
 		561A216429A93F7C005FC643 /* fverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561A216329A93F7C005FC643 /* fverApp.swift */; };
 		561A216629A93F7C005FC643 /* HometView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561A216529A93F7C005FC643 /* HometView.swift */; };
 		561A216829A93F7D005FC643 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561A216729A93F7D005FC643 /* Assets.xcassets */; };
@@ -35,6 +46,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		510756AC29AD195E00B137A6 /* AntTreeGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AntTreeGame.swift; path = ../../../Inearby/Inearby/Inearby/Model/AntTreeGame.swift; sourceTree = "<group>"; };
+		510756AE29AD197200B137A6 /* games.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = games.swift; path = ../../../Inearby/Inearby/Inearby/Model/games.swift; sourceTree = "<group>"; };
+		510756B029AD197900B137A6 /* caustomcards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = caustomcards.swift; path = ../../../Inearby/Inearby/Inearby/Model/caustomcards.swift; sourceTree = "<group>"; };
+		510756B229AD197E00B137A6 /* ConnnectFourView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConnnectFourView.swift; path = ../../../Inearby/Inearby/Inearby/Model/ConnnectFourView.swift; sourceTree = "<group>"; };
+		510756B429AD198200B137A6 /* ConnectFour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConnectFour.swift; path = ../../../Inearby/Inearby/Inearby/Model/ConnectFour.swift; sourceTree = "<group>"; };
+		510756B629AD198700B137A6 /* RPSMultipeerSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RPSMultipeerSession.swift; path = ../../../Inearby/Inearby/Inearby/Model/RPSMultipeerSession.swift; sourceTree = "<group>"; };
+		510756B829AD198C00B137A6 /* PairView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PairView.swift; path = ../../../Inearby/Inearby/Inearby/Model/PairView.swift; sourceTree = "<group>"; };
+		510756BA29AD199100B137A6 /* ResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultView.swift; path = ../../../Inearby/Inearby/Inearby/Model/ResultView.swift; sourceTree = "<group>"; };
+		510756BC29AD199700B137A6 /* Homee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Homee.swift; path = ../../../Inearby/Inearby/Inearby/Model/Homee.swift; sourceTree = "<group>"; };
+		510756BE29AD199C00B137A6 /* Stickersview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stickersview.swift; path = ../../../Inearby/Inearby/Inearby/View/Stickersview.swift; sourceTree = "<group>"; };
+		510756C029AD19B100B137A6 /* CV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CV.swift; sourceTree = "<group>"; };
+		510756C229AD1AFB00B137A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		561A216029A93F7C005FC643 /* fver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		561A216329A93F7C005FC643 /* fverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fverApp.swift; sourceTree = "<group>"; };
 		561A216529A93F7C005FC643 /* HometView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HometView.swift; sourceTree = "<group>"; };
@@ -74,6 +97,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		510756AB29AD193500B137A6 /* tbn */ = {
+			isa = PBXGroup;
+			children = (
+				510756AC29AD195E00B137A6 /* AntTreeGame.swift */,
+				510756AE29AD197200B137A6 /* games.swift */,
+				510756B029AD197900B137A6 /* caustomcards.swift */,
+				510756B229AD197E00B137A6 /* ConnnectFourView.swift */,
+				510756B429AD198200B137A6 /* ConnectFour.swift */,
+				510756B629AD198700B137A6 /* RPSMultipeerSession.swift */,
+				510756B829AD198C00B137A6 /* PairView.swift */,
+				510756BA29AD199100B137A6 /* ResultView.swift */,
+				510756BC29AD199700B137A6 /* Homee.swift */,
+				510756BE29AD199C00B137A6 /* Stickersview.swift */,
+				510756C029AD19B100B137A6 /* CV.swift */,
+			);
+			path = tbn;
+			sourceTree = "<group>";
+		};
 		561A215729A93F7C005FC643 = {
 			isa = PBXGroup;
 			children = (
@@ -94,9 +135,10 @@
 		561A216229A93F7C005FC643 /* fver */ = {
 			isa = PBXGroup;
 			children = (
+				510756C229AD1AFB00B137A6 /* Info.plist */,
 				561A216329A93F7C005FC643 /* fverApp.swift */,
+				510756AB29AD193500B137A6 /* tbn */,
 				561A219329AA3421005FC643 /* FirebaseHelpers */,
-				561A217529A95A41005FC643 /* ViewModel */,
 				561A217429A95A39005FC643 /* View */,
 				561A217329A95A31005FC643 /* Model */,
 				561A216729A93F7D005FC643 /* Assets.xcassets */,
@@ -137,13 +179,6 @@
 				561A217829A9661D005FC643 /* PlayerIndicatorView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		561A217529A95A41005FC643 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		561A219329AA3421005FC643 /* FirebaseHelpers */ = {
@@ -246,20 +281,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				510756BF29AD199C00B137A6 /* Stickersview.swift in Sources */,
 				561A216629A93F7C005FC643 /* HometView.swift in Sources */,
+				510756BD29AD199700B137A6 /* Homee.swift in Sources */,
 				561A21D629AB641A005FC643 /* AlertItem.swift in Sources */,
+				510756B329AD197E00B137A6 /* ConnnectFourView.swift in Sources */,
 				561A217D29A96CFF005FC643 /* GmaeViewModel.swift in Sources */,
+				510756AF29AD197200B137A6 /* games.swift in Sources */,
 				561A219529AA3554005FC643 /* FirebaseService.swift in Sources */,
+				510756AD29AD195E00B137A6 /* AntTreeGame.swift in Sources */,
 				561A217B29A96ACC005FC643 /* LodingView.swift in Sources */,
 				561A217229A957B8005FC643 /* GameView.swift in Sources */,
 				561A21D829AB7727005FC643 /* GameNotifications.swift in Sources */,
 				561A216429A93F7C005FC643 /* fverApp.swift in Sources */,
 				561A218129AA0EC0005FC643 /* User.swift in Sources */,
+				510756B929AD198C00B137A6 /* PairView.swift in Sources */,
+				510756BB29AD199200B137A6 /* ResultView.swift in Sources */,
 				561A219229AA3418005FC643 /* FirebaseRefrnce.swift in Sources */,
 				561A217929A9661D005FC643 /* PlayerIndicatorView.swift in Sources */,
+				510756B129AD197900B137A6 /* caustomcards.swift in Sources */,
 				56F52FCD29ACECA000CF8060 /* TttOfline.swift in Sources */,
+				510756B729AD198700B137A6 /* RPSMultipeerSession.swift in Sources */,
 				561A217729A95A6E005FC643 /* HomeViewModel.swift in Sources */,
 				561A217F29A9F757005FC643 /* Model.swift in Sources */,
+				510756C129AD19B100B137A6 /* CV.swift in Sources */,
+				510756B529AD198200B137A6 /* ConnectFour.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +436,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"fver/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = fver/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Inearby uses local network to nonnect with players around you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -418,6 +466,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"fver/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = fver/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Inearby uses local network to nonnect with players around you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
