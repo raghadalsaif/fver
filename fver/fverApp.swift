@@ -18,9 +18,7 @@ struct fverApp: App {
     
     var body: some Scene {
         WindowGroup {
-            AntTreeGame(currentView: .constant(0))
-                .environmentObject(RPSMultipeerSession(username: "e"))
-//            HometView()
+            HometView()
         }
     }
 }
