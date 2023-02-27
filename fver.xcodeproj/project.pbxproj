@@ -31,6 +31,7 @@
 		561A21D629AB641A005FC643 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561A21D529AB641A005FC643 /* AlertItem.swift */; };
 		561A21D829AB7727005FC643 /* GameNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561A21D729AB7727005FC643 /* GameNotifications.swift */; };
 		56F52FCB29AB7E1600CF8060 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 56F52FCA29AB7E1600CF8060 /* FirebaseFirestoreSwift */; };
+		56F52FCD29ACECA000CF8060 /* TttOfline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F52FCC29ACECA000CF8060 /* TttOfline.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		561A219429AA3554005FC643 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		561A21D529AB641A005FC643 /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
 		561A21D729AB7727005FC643 /* GameNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameNotifications.swift; sourceTree = "<group>"; };
+		56F52FCC29ACECA000CF8060 /* TttOfline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TttOfline.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				561A217C29A96CFF005FC643 /* GmaeViewModel.swift */,
 				561A217A29A96ACC005FC643 /* LodingView.swift */,
 				561A216529A93F7C005FC643 /* HometView.swift */,
+				56F52FCC29ACECA000CF8060 /* TttOfline.swift */,
 				561A217829A9661D005FC643 /* PlayerIndicatorView.swift */,
 			);
 			path = View;
@@ -254,6 +257,7 @@
 				561A218129AA0EC0005FC643 /* User.swift in Sources */,
 				561A219229AA3418005FC643 /* FirebaseRefrnce.swift in Sources */,
 				561A217929A9661D005FC643 /* PlayerIndicatorView.swift in Sources */,
+				56F52FCD29ACECA000CF8060 /* TttOfline.swift in Sources */,
 				561A217729A95A6E005FC643 /* HomeViewModel.swift in Sources */,
 				561A217F29A9F757005FC643 /* Model.swift in Sources */,
 			);

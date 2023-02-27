@@ -17,21 +17,15 @@ struct GameView: View {
     @Environment(\.dismiss) private var dismiss
     var body: some View {
         
+        
         GeometryReader{ geometry in
             VStack{
                 Text(viewModel.gameNotification)
-                Button{
-                   // mode.wrappedValue.dismiss() or
-                    
-                    dismiss()
-                    viewModel.quitGame()
-                }label: {
-                    Text("Quit")
-                }
-                //
-                if viewModel.game?.player2Id == ""{
-                    LodingView()
-                }
+                
+//                //loding view
+//                if viewModel.game?.player2Id == ""{
+//                    LodingView()
+//                }
               
                 Spacer()
                 
@@ -42,9 +36,9 @@ struct GameView: View {
                         ForEach(0..<9){ i in
                          
                             ZStack{
-                                Circle()
-                                    .foregroundColor(.gray.opacity(0.7))
-                                    .frame(width: geometry.size.width/3 - 15)
+                                Rectangle()
+                                    .foregroundColor(.black).cornerRadius(15)
+                                    .frame(width: geometry.size.width/3 - 15, height: 80)
                                 PlayerIndicatorView(systemimagename: viewModel.game?.moves[i]?.indicater ?? "applelogo")
                                     
                             }.onTapGesture {
@@ -73,8 +67,27 @@ struct GameView: View {
                             viewModel.quitGame()
                         }))
                     }
+                 
+                Spacer()
+                Button{
+                   // mode.wrappedValue.dismiss() or
+                    
+                    dismiss()
+                    viewModel.quitGame()
+                }label: {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(Color("Orange"))
+                            .frame(width: 300 , height: 50)
+                        Text("Exit Game")
+                            .foregroundColor(.white)
+                            .font(.title)
+                        
+                        
+                    }
+                }
                 
-            }
+            }.background(Color("XOBoard"))
         }
         .onAppear {
             viewModel.getTheGame()
