@@ -102,7 +102,7 @@ final class FirebaseService: ObservableObject{
 
         
     }
-    
+    //done 👍🏻
     // to quit the game
     func quiteTheGame(){
         guard game != nil else {return}

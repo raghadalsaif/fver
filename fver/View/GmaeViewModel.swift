@@ -66,6 +66,7 @@ final class GmaeViewModel: ObservableObject {
         
     }
     
+    
     func processPlayerMove(for position : Int){
         
         guard game != nil else{return}
@@ -119,7 +120,7 @@ final class GmaeViewModel: ObservableObject {
         return moves.compactMap{$0}.count == 9
     }
     
-    
+    //done 👍🏻
     func quitGame(){
         FirebaseService.shared.quiteTheGame()
     }

@@ -6,6 +6,8 @@
 //
 
 import Foundation
+//import FirebaseFirestore
+//import FirebaseFirestoreSwift
 
 struct Move: Codable {
     let isPlayer1 : Bool
@@ -34,3 +36,21 @@ struct Game : Codable {
     var moves : [Move?]
     
 }
+
+//struct Session: Codable {
+//    @DocumentID var id: String? = ""
+//    var player1: DocumentReference
+//    var player2: DocumentReference?
+//    var isGameOver: Bool = false
+//    var gameRef: DocumentReference
+//    var winner: String
+//    }
+
+
+//func a(){
+//    let newUser = User(id: <#T##String#>, nickname: <#T##String#>, gender: <#T##String#>)
+//    let newUserRef = Firestore.firestore().collection("Users").document("asdc123")
+//    try? newUser.setData(from: newUser)
+//    let session = Session(player1: Firestore.firestore().collection("Users").document("asdc123"), gameRef: <#T##DocumentReference#>, winner: <#T##String#>)
+//}
+
