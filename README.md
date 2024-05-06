@@ -1,37 +1,40 @@
-# Inearby 
+![image](https://github.com/raghadalsaif/fver/assets/107502187/1c53518d-1817-413b-ad16-139c153d9860)# Inearby 
 Inearby app is in app let you play with your nearby 🎮
 
-# Challenge Statement
-
-##### Make an inclusive solution that help people with vision problems, blind, deaf to break their routine and try a new things
 
 # Solution Concept
 
-##### create an app that motivate and breaking people routine through daily tasks and quotes, so every day you will receive a motivation quotes or a tasks that you shoulde accomplish through the day.  
+##### create an app that transform the tradtional games to in app, aiming to entertain and pass the time by changing the way we play. With Inearby, you will be able to play with people in the same room by simply opening the app!
+
 
 
 # Technologies & Tools 🛠️
 - SwiftUI
 - Accessibility voice over
 - Localization
+- Multipeer Connectivity
+- Figma
+- Firebase
 
 # Demo of the App 📹
 
 
-https://user-images.githubusercontent.com/107502187/212533239-cf44853d-ac82-4c8a-9374-3951ea952c0e.mp4
+Coming soon 🔜
 
 
 ---
 
 
-https://user-images.githubusercontent.com/107502187/212533431-a31b09b3-403e-4c27-975c-16d38548195c.mov
 
 
-# Challenge Summary!
+
 
 
 
 <img width="1512" alt="Screenshot 1444-06-22 at 11 53 28 AM" src="https://user-images.githubusercontent.com/107502187/212531832-b93052d6-c1a2-49d1-a523-968c1c95ea71.png">
+<img width="1512" alt="Screenshot 1444-06-22 at 11 53 28 AM" src="https://my.iosda.org/site/glide?path=teams%2F3149%2Fbanner%2FInearby+inside.png&w=2900&h=300&fit=crop&s=b3a5f85a6f634c12bbb98345f6837d64![image](https://github.com/raghadalsaif/fver/assets/107502187/162eae1d-24a6-47c4-b714-c0eed8c9b4a5)">
+
+
 
 # Developers 👩🏼‍💻
 
