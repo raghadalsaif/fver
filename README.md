@@ -1,5 +1,5 @@
 ![image](https://github.com/raghadalsaif/fver/assets/107502187/1c53518d-1817-413b-ad16-139c153d9860)
-# Paywise 
+# Inearby 
 Inearby app is in app let you play with your nearby 🎮
 
 
